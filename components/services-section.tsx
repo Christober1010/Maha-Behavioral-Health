@@ -92,8 +92,9 @@ export function ServicesSection() {
                           key={featureIndex}
                           className="flex items-center text-sm text-gray-600"
                         >
+                          {/* For better visibility, use a solid bg color dot */}
                           <div
-                            className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full mr-3 flex-shrink-0`}
+                            className={`w-2 h-2 rounded-full mr-3 flex-shrink-0 ${service.dotColor}`}
                           />
                           {feature}
                         </li>
@@ -102,8 +103,8 @@ export function ServicesSection() {
 
                     {/* Button always at bottom */}
                     <Button
-                      onClick={() => router.push("/appointment")} // or "/contact"
-                      className={`mt-auto w-full bg-gradient-to-r ${service.color} hover:shadow-lg text-white transition-all duration-300 transform hover:scale-105`}
+                      onClick={() => router.push("/appointment")}
+                      className={`mt-auto w-full ${service.color} hover:shadow-lg text-white transition-all duration-300 transform hover:scale-105`}
                     >
                       Start Therapy
                       <ArrowRight className="ml-2 h-4 w-4" />

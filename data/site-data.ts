@@ -79,110 +79,117 @@ export const siteData = {
       logo: "https://www.kindpng.com/picc/m/185-1853551_tricare-logo-hd-png-download.png",
     },
   ],
-  services: [
-    {
-      id: "aba-therapy",
-      title: "Applied Behavior Analysis (ABA)",
-      description:
-        "Evidence-based therapy focusing on improving specific behaviors and teaching new skills through positive reinforcement.",
-      icon: "Brain",
-      color: "from-purple-500 to-pink-500",
-      features: [
-        "One-on-one intensive therapy",
-        "Behavior modification programs",
-        "Social skills development",
-        "Communication enhancement",
-        "Daily living skills training",
-      ],
-      image:
-        "https://cdn.prod.website-files.com/66390c6e162a2070bfe399de/6647e824ed3fdfd584cf35e1_649a7e113efc0f53fb94d8f4_-aba%2520therapy.jpeg",
-    },
-    {
-      id: "speech-therapy",
-      title: "Speech & Language Therapy",
-      description:
-        "Comprehensive communication therapy to develop verbal and non-verbal communication skills for individuals with autism.",
-      icon: "MessageCircle",
-      color: "from-blue-500 to-cyan-500",
-      features: [
-        "Articulation therapy",
-        "Language development",
-        "Alternative communication methods",
-        "Social communication skills",
-        "Augmentative communication devices",
-      ],
-      image:
-        "https://www.indiaautismcenter.org/wp-content/uploads/woman-doing-speech-therapy-with-little-blonde-boy-1-1024x683.jpg",
-    },
-    {
-      id: "occupational-therapy",
-      title: "Occupational Therapy",
-      description:
-        "Helping individuals develop fine motor skills, sensory processing, and daily living skills for greater independence.",
-      icon: "Hand",
-      color: "from-green-500 to-emerald-500",
-      features: [
-        "Sensory integration therapy",
-        "Fine motor skill development",
-        "Self-care skills training",
-        "Adaptive equipment training",
-        "Environmental modifications",
-      ],
-      image:
-        "https://pebblestherapycentre.in/wp-content/uploads/2024/07/Best-Pediatric-Occupational-Therapy-Centres-in-Chennai-1024x684.webp",
-    },
-    {
-      id: "behavioral-consultation",
-      title: "Behavioral Consultation",
-      description:
-        "Expert consultation services for families, schools, and caregivers to implement effective behavioral strategies.",
-      icon: "Users",
-      color: "from-orange-500 to-red-500",
-      features: [
-        "Behavior assessment",
-        "Intervention planning",
-        "Caregiver training",
-        "School collaboration",
-        "Crisis intervention",
-      ],
-      image:
-        "https://wildsunbehavioralservices.com/otheeboo/2021/05/Consultation-768x316.jpg",
-    },
-    {
-      id: "social-skills-groups",
-      title: "Social Skills Groups",
-      description:
-        "Structured group sessions designed to help individuals with autism develop social interaction and communication skills.",
-      icon: "Heart",
-      color: "from-teal-500 to-blue-500",
-      features: [
-        "Peer interaction practice",
-        "Social story development",
-        "Role-playing activities",
-        "Friendship building",
-        "Community integration",
-      ],
-      image:
-        "https://360behavioralhealth.com/wp-content/uploads/2018/11/skills.jpg.webp",
-    },
-    {
-      id: "family-support",
-      title: "Family Support Services",
-      description:
-        "Comprehensive support for families navigating autism, including parent training and sibling support programs.",
-      icon: "Home",
-      color: "from-indigo-500 to-purple-500",
-      features: [
-        "Parent training workshops",
-        "Sibling support groups",
-        "Family therapy sessions",
-        "Resource coordination",
-        "Advocacy support",
-      ],
-      image:
-        "https://www.sieda.org/wp-content/uploads/2013/09/iStock_000017960915Medium_crop.jpg",
-    },
-  ],
+  services : [
+  {
+    id: "aba-therapy",
+    title: "Applied Behavior Analysis (ABA)",
+    description:
+      "Evidence-based therapy focusing on improving specific behaviors and teaching new skills through positive reinforcement.",
+    icon: "Brain",
+    color: "bg-gradient-to-r from-purple-500 to-pink-500",  // full gradient classes here
+    dotColor: "bg-purple-500", // solid dot color for visibility
+    features: [
+      "One-on-one intensive therapy",
+      "Behavior modification programs",
+      "Social skills development",
+      "Communication enhancement",
+      "Daily living skills training",
+    ],
+    image:
+      "https://cdn.prod.website-files.com/66390c6e162a2070bfe399de/6647e824ed3fdfd584cf35e1_649a7e113efc0f53fb94d8f4_-aba%2520therapy.jpeg",
+  },
+  {
+    id: "speech-therapy",
+    title: "Speech & Language Therapy",
+    description:
+      "Comprehensive communication therapy to develop verbal and non-verbal communication skills for individuals with autism.",
+    icon: "MessageCircle",
+    color: "bg-gradient-to-r from-blue-500 to-cyan-500",
+    dotColor: "bg-blue-500",
+    features: [
+      "Articulation therapy",
+      "Language development",
+      "Alternative communication methods",
+      "Social communication skills",
+      "Augmentative communication devices",
+    ],
+    image:
+      "https://www.indiaautismcenter.org/wp-content/uploads/woman-doing-speech-therapy-with-little-blonde-boy-1-1024x683.jpg",
+  },
+  {
+    id: "occupational-therapy",
+    title: "Occupational Therapy",
+    description:
+      "Helping individuals develop fine motor skills, sensory processing, and daily living skills for greater independence.",
+    icon: "Hand",
+    color: "bg-gradient-to-r from-green-500 to-emerald-500",
+    dotColor: "bg-green-500",
+    features: [
+      "Sensory integration therapy",
+      "Fine motor skill development",
+      "Self-care skills training",
+      "Adaptive equipment training",
+      "Environmental modifications",
+    ],
+    image:
+      "https://pebblestherapycentre.in/wp-content/uploads/2024/07/Best-Pediatric-Occupational-Therapy-Centres-in-Chennai-1024x684.webp",
+  },
+  {
+    id: "behavioral-consultation",
+    title: "Behavioral Consultation",
+    description:
+      "Expert consultation services for families, schools, and caregivers to implement effective behavioral strategies.",
+    icon: "Users",
+    color: "bg-gradient-to-r from-orange-500 to-red-500",
+    dotColor: "bg-orange-500",
+    features: [
+      "Behavior assessment",
+      "Intervention planning",
+      "Caregiver training",
+      "School collaboration",
+      "Crisis intervention",
+    ],
+    image:
+      "https://wildsunbehavioralservices.com/otheeboo/2021/05/Consultation-768x316.jpg",
+  },
+  {
+    id: "social-skills-groups",
+    title: "Social Skills Groups",
+    description:
+      "Structured group sessions designed to help individuals with autism develop social interaction and communication skills.",
+    icon: "Heart",
+    color: "bg-gradient-to-r from-teal-500 to-blue-500",
+    dotColor: "bg-teal-500",
+    features: [
+      "Peer interaction practice",
+      "Social story development",
+      "Role-playing activities",
+      "Friendship building",
+      "Community integration",
+    ],
+    image:
+      "https://360behavioralhealth.com/wp-content/uploads/2018/11/skills.jpg.webp",
+  },
+  {
+    id: "family-support",
+    title: "Family Support Services",
+    description:
+      "Comprehensive support for families navigating autism, including parent training and sibling support programs.",
+    icon: "Home",
+    color: "bg-gradient-to-r from-indigo-500 to-purple-500",
+    dotColor: "bg-indigo-500",
+    features: [
+      "Parent training workshops",
+      "Sibling support groups",
+      "Family therapy sessions",
+      "Resource coordination",
+      "Advocacy support",
+    ],
+    image:
+      "https://www.sieda.org/wp-content/uploads/2013/09/iStock_000017960915Medium_crop.jpg",
+  },
+]
+,
 
   howToStart: {
     title: "How to Get Started",
