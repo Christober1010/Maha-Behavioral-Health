@@ -33,7 +33,7 @@ export function ContactSection() {
         }
       `}</style>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white px-6">
         <ScrollAnimation animation="fadeIn">
           <div
             className="bg-blue-50 hover:bg-blue-100 py-12 px-6 rounded-xl max-w-5xl mx-auto text-center"

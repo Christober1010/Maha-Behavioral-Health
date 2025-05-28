@@ -86,7 +86,7 @@ export function ServicesSection() {
                   </CardHeader>
 
                   <CardContent className="flex flex-col flex-grow justify-between">
-                    <ul className="space-y-2 mb-6">
+                    <ul className="space-y-2 mb-6 list-disc">
                       {service.features.map((feature, featureIndex) => (
                         <li
                           key={featureIndex}
@@ -94,7 +94,7 @@ export function ServicesSection() {
                         >
                           {/* For better visibility, use a solid bg color dot */}
                           <div
-                            className={`w-2 h-2 rounded-full mr-3 flex-shrink-0 ${service.dotColor}`}
+                            className={`w-2 h-2 rounded-full mr-3 flex-shrink-0 bg-gray-500`}
                           />
                           {feature}
                         </li>

@@ -21,7 +21,7 @@ export function AboutSection() {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <ScrollAnimation animation="slideLeft" delay={300}>
               <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Vision</h3>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Vision</h3>
                 <p className="text-lg text-gray-600 leading-relaxed">{about.vision}</p>
               </div>
             </ScrollAnimation>
