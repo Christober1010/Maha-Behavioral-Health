@@ -55,7 +55,10 @@ export const siteData = {
       name: "Aetna",
       logo: "	https://www.aetna.com/content/dam/aetna/images/logos/Aetna_Logo_ss_Violet_RGB_Coated.svg",
     },
-    { name: "Cigna", logo: "https://brandlogos.net/wp-content/uploads/2023/08/cigna_healthcare-logo_brandlogos.net_lblbp-512x512.png" },
+    {
+      name: "Cigna",
+      logo: "https://brandlogos.net/wp-content/uploads/2023/08/cigna_healthcare-logo_brandlogos.net_lblbp-512x512.png",
+    },
     {
       name: "UnitedHealthcare",
       logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/29/UnitedHealthcare_%28logo%29.svg/564px-UnitedHealthcare_%28logo%29.svg.png?20231113000934",
@@ -68,129 +71,133 @@ export const siteData = {
       name: "Medicaid",
       logo: "https://i0.wp.com/clearhealthcosts.com/wp-content/uploads/2023/02/medicaid-logo-5.jpg?w=1600&ssl=1",
     },
-    { name: "Humana", logo: "https://1000logos.net/wp-content/uploads/2020/08/Humana-logo-500x225.jpg" },
+    {
+      name: "Humana",
+      logo: "https://1000logos.net/wp-content/uploads/2020/08/Humana-logo-500x225.jpg",
+    },
     {
       name: "Kaiser Permanente",
       logo: "https://banner2.cleanpng.com/20181128/krb/kisspng-kaiser-permanente-rancho-san-diego-medical-offices-1713917184118.webp",
     },
-    { name: "Anthem", logo: "https://www.logo.wine/a/logo/Anthem_(company)/Anthem_(company)-Logo.wine.svg" },
+    {
+      name: "Anthem",
+      logo: "https://www.logo.wine/a/logo/Anthem_(company)/Anthem_(company)-Logo.wine.svg",
+    },
     {
       name: "Tricare",
       logo: "https://www.kindpng.com/picc/m/185-1853551_tricare-logo-hd-png-download.png",
     },
   ],
-  services : [
-  {
-    id: "aba-therapy",
-    title: "Applied Behavior Analysis (ABA)",
-    description:
-      "Evidence-based therapy focusing on improving specific behaviors and teaching new skills through positive reinforcement.",
-    icon: "Brain",
-    color: "bg-gradient-to-r from-purple-500 to-pink-500",  // full gradient classes here
-    dotColor: "bg-purple-500", // solid dot color for visibility
-    features: [
-      "One-on-one intensive therapy",
-      "Behavior modification programs",
-      "Social skills development",
-      "Communication enhancement",
-      "Daily living skills training",
-    ],
-    image:
-      "https://cdn.prod.website-files.com/66390c6e162a2070bfe399de/6647e824ed3fdfd584cf35e1_649a7e113efc0f53fb94d8f4_-aba%2520therapy.jpeg",
-  },
-  {
-    id: "speech-therapy",
-    title: "Speech & Language Therapy",
-    description:
-      "Comprehensive communication therapy to develop verbal and non-verbal communication skills for individuals with autism.",
-    icon: "MessageCircle",
-    color: "bg-gradient-to-r from-blue-500 to-cyan-500",
-    dotColor: "bg-blue-500",
-    features: [
-      "Articulation therapy",
-      "Language development",
-      "Alternative communication methods",
-      "Social communication skills",
-      "Augmentative communication devices",
-    ],
-    image:
-      "https://www.indiaautismcenter.org/wp-content/uploads/woman-doing-speech-therapy-with-little-blonde-boy-1-1024x683.jpg",
-  },
-  {
-    id: "occupational-therapy",
-    title: "Occupational Therapy",
-    description:
-      "Helping individuals develop fine motor skills, sensory processing, and daily living skills for greater independence.",
-    icon: "Hand",
-    color: "bg-gradient-to-r from-green-500 to-emerald-500",
-    dotColor: "bg-green-500",
-    features: [
-      "Sensory integration therapy",
-      "Fine motor skill development",
-      "Self-care skills training",
-      "Adaptive equipment training",
-      "Environmental modifications",
-    ],
-    image:
-      "https://pebblestherapycentre.in/wp-content/uploads/2024/07/Best-Pediatric-Occupational-Therapy-Centres-in-Chennai-1024x684.webp",
-  },
-  {
-    id: "behavioral-consultation",
-    title: "Behavioral Consultation",
-    description:
-      "Expert consultation services for families, schools, and caregivers to implement effective behavioral strategies.",
-    icon: "Users",
-    color: "bg-gradient-to-r from-orange-500 to-red-500",
-    dotColor: "bg-orange-500",
-    features: [
-      "Behavior assessment",
-      "Intervention planning",
-      "Caregiver training",
-      "School collaboration",
-      "Crisis intervention",
-    ],
-    image:
-      "https://wildsunbehavioralservices.com/otheeboo/2021/05/Consultation-768x316.jpg",
-  },
-  {
-    id: "social-skills-groups",
-    title: "Social Skills Groups",
-    description:
-      "Structured group sessions designed to help individuals with autism develop social interaction and communication skills.",
-    icon: "Heart",
-    color: "bg-gradient-to-r from-teal-500 to-blue-500",
-    dotColor: "bg-teal-500",
-    features: [
-      "Peer interaction practice",
-      "Social story development",
-      "Role-playing activities",
-      "Friendship building",
-      "Community integration",
-    ],
-    image:
-      "https://360behavioralhealth.com/wp-content/uploads/2018/11/skills.jpg.webp",
-  },
-  {
-    id: "family-support",
-    title: "Family Support Services",
-    description:
-      "Comprehensive support for families navigating autism, including parent training and sibling support programs.",
-    icon: "Home",
-    color: "bg-gradient-to-r from-indigo-500 to-purple-500",
-    dotColor: "bg-indigo-500",
-    features: [
-      "Parent training workshops",
-      "Sibling support groups",
-      "Family therapy sessions",
-      "Resource coordination",
-      "Advocacy support",
-    ],
-    image:
-      "https://www.sieda.org/wp-content/uploads/2013/09/iStock_000017960915Medium_crop.jpg",
-  },
-]
-,
-
+  services: [
+    {
+      id: "aba-therapy",
+      title: "Applied Behavior Analysis (ABA)",
+      description:
+        "Evidence-based therapy focusing on improving specific behaviors and teaching new skills through positive reinforcement.",
+      icon: "Brain",
+      color: "bg-gradient-to-r from-purple-500 to-pink-500", // full gradient classes here
+      dotColor: "bg-purple-500", // solid dot color for visibility
+      features: [
+        "One-on-one intensive therapy",
+        "Behavior modification programs",
+        "Social skills development",
+        "Communication enhancement",
+        "Daily living skills training",
+      ],
+      image:
+        "https://cdn.prod.website-files.com/66390c6e162a2070bfe399de/6647e824ed3fdfd584cf35e1_649a7e113efc0f53fb94d8f4_-aba%2520therapy.jpeg",
+    },
+    {
+      id: "speech-therapy",
+      title: "Speech & Language Therapy",
+      description:
+        "Comprehensive communication therapy to develop verbal and non-verbal communication skills for individuals with autism.",
+      icon: "MessageCircle",
+      color: "bg-gradient-to-r from-blue-500 to-cyan-500",
+      dotColor: "bg-blue-500",
+      features: [
+        "Articulation therapy",
+        "Language development",
+        "Alternative communication methods",
+        "Social communication skills",
+        "Augmentative communication devices",
+      ],
+      image:
+        "https://www.indiaautismcenter.org/wp-content/uploads/woman-doing-speech-therapy-with-little-blonde-boy-1-1024x683.jpg",
+    },
+    {
+      id: "occupational-therapy",
+      title: "Occupational Therapy",
+      description:
+        "Helping individuals develop fine motor skills, sensory processing, and daily living skills for greater independence.",
+      icon: "Hand",
+      color: "bg-gradient-to-r from-green-500 to-emerald-500",
+      dotColor: "bg-green-500",
+      features: [
+        "Sensory integration therapy",
+        "Fine motor skill development",
+        "Self-care skills training",
+        "Adaptive equipment training",
+        "Environmental modifications",
+      ],
+      image:
+        "https://pebblestherapycentre.in/wp-content/uploads/2024/07/Best-Pediatric-Occupational-Therapy-Centres-in-Chennai-1024x684.webp",
+    },
+    {
+      id: "behavioral-consultation",
+      title: "Behavioral Consultation",
+      description:
+        "Expert consultation services for families, schools, and caregivers to implement effective behavioral strategies.",
+      icon: "Users",
+      color: "bg-gradient-to-r from-orange-500 to-red-500",
+      dotColor: "bg-orange-500",
+      features: [
+        "Behavior assessment",
+        "Intervention planning",
+        "Caregiver training",
+        "School collaboration",
+        "Crisis intervention",
+      ],
+      image:
+        "https://wildsunbehavioralservices.com/otheeboo/2021/05/Consultation-768x316.jpg",
+    },
+    {
+      id: "social-skills-groups",
+      title: "Social Skills Groups",
+      description:
+        "Structured group sessions designed to help individuals with autism develop social interaction and communication skills.",
+      icon: "Heart",
+      color: "bg-gradient-to-r from-teal-500 to-blue-500",
+      dotColor: "bg-teal-500",
+      features: [
+        "Peer interaction practice",
+        "Social story development",
+        "Role-playing activities",
+        "Friendship building",
+        "Community integration",
+      ],
+      image:
+        "https://360behavioralhealth.com/wp-content/uploads/2018/11/skills.jpg.webp",
+    },
+    {
+      id: "family-support",
+      title: "Family Support Services",
+      description:
+        "Comprehensive support for families navigating autism, including parent training and sibling support programs.",
+      icon: "Home",
+      color: "bg-gradient-to-r from-indigo-500 to-purple-500",
+      dotColor: "bg-indigo-500",
+      features: [
+        "Parent training workshops",
+        "Sibling support groups",
+        "Family therapy sessions",
+        "Resource coordination",
+        "Advocacy support",
+      ],
+      image:
+        "https://www.sieda.org/wp-content/uploads/2013/09/iStock_000017960915Medium_crop.jpg",
+    },
+  ],
   howToStart: {
     title: "How to Get Started",
     subtitle: "Your journey to better care begins with these simple steps",
@@ -201,7 +208,7 @@ export const siteData = {
         description:
           "Schedule a comprehensive consultation to discuss your needs and goals. We'll assess your situation and recommend the best treatment approach.",
         icon: "Calendar",
-        color: "from-blue-500 to-purple-500",
+        color: "blue-purple",
         duration: "60-90 minutes",
       },
       {
@@ -210,7 +217,7 @@ export const siteData = {
         description:
           "Our team conducts thorough evaluations including behavioral, developmental, and functional assessments to create a personalized treatment plan.",
         icon: "ClipboardList",
-        color: "from-green-500 to-blue-500",
+        color: "green-blue",
         duration: "2-3 sessions",
       },
       {
@@ -219,7 +226,7 @@ export const siteData = {
         description:
           "Based on assessment results, we develop individualized treatment goals and strategies tailored to your specific needs and preferences.",
         icon: "Target",
-        color: "from-purple-500 to-pink-500",
+        color: "purple-pink",
         duration: "1-2 weeks",
       },
       {
@@ -228,7 +235,7 @@ export const siteData = {
         description:
           "Start your personalized therapy program with our experienced team. We provide ongoing support and adjust treatment as needed.",
         icon: "Play",
-        color: "from-orange-500 to-red-500",
+        color: "orange-red",
         duration: "Ongoing",
       },
       {
@@ -237,12 +244,11 @@ export const siteData = {
         description:
           "Regular progress reviews ensure treatment effectiveness. We celebrate achievements and modify approaches to maximize outcomes.",
         icon: "TrendingUp",
-        color: "from-teal-500 to-green-500",
+        color: "teal-green",
         duration: "Monthly reviews",
       },
     ],
   },
-
   autismInfo: {
     title: "Understanding Autism Spectrum Disorder",
     description:

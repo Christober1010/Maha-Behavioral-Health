@@ -104,7 +104,21 @@ export function ServicesSection() {
                     {/* Button always at bottom */}
                     <Button
                       onClick={() => router.push("/appointment")}
-                      className={`mt-auto w-full ${service.color} hover:shadow-lg text-white transition-all duration-300 transform hover:scale-105`}
+                      className={`mt-auto w-full text-white transition-all duration-300 transform hover:scale-105 hover:shadow-lg ${
+                        service.id === "aba-therapy"
+                          ? "bg-gradient-to-r from-purple-500 to-pink-500"
+                          : service.id === "speech-therapy"
+                          ? "bg-gradient-to-r from-blue-500 to-cyan-500"
+                          : service.id === "occupational-therapy"
+                          ? "bg-gradient-to-r from-green-500 to-emerald-500"
+                          : service.id === "behavioral-consultation"
+                          ? "bg-gradient-to-r from-orange-500 to-red-500"
+                          : service.id === "social-skills-groups"
+                          ? "bg-gradient-to-r from-teal-500 to-blue-500"
+                          : service.id === "family-support"
+                          ? "bg-gradient-to-r from-indigo-500 to-purple-500"
+                          : "bg-gray-400"
+                      }`}
                     >
                       Start Therapy
                       <ArrowRight className="ml-2 h-4 w-4" />

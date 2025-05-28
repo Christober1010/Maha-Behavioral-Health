@@ -13,6 +13,14 @@ const iconMap = {
   TrendingUp,
 }
 
+const gradientMap: Record<string, string> = {
+  "blue-purple": "bg-gradient-to-r from-blue-500 to-purple-500",
+  "green-blue": "bg-gradient-to-r from-green-500 to-blue-500",
+  "purple-pink": "bg-gradient-to-r from-purple-500 to-pink-500",
+  "orange-red": "bg-gradient-to-r from-orange-500 to-red-500",
+  "teal-green": "bg-gradient-to-r from-teal-500 to-green-500",
+}
+
 export function HowToStartSection() {
   const { howToStart } = siteData
 
@@ -33,6 +41,7 @@ export function HowToStartSection() {
             {howToStart.steps.map((step, index) => {
               const IconComponent = iconMap[step.icon as keyof typeof iconMap]
               const isEven = index % 2 === 0
+              const colorClass = gradientMap[step.color]
 
               return (
                 <ScrollAnimation
@@ -47,7 +56,7 @@ export function HowToStartSection() {
                         <div className="flex-1 p-8 lg:p-12">
                           <div className="flex items-center mb-6">
                             <div
-                              className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center mr-4`}
+                              className={`w-16 h-16 ${colorClass} rounded-full flex items-center justify-center mr-4`}
                             >
                               <IconComponent className="h-8 w-8 text-white" />
                             </div>
@@ -65,10 +74,10 @@ export function HowToStartSection() {
 
                         {/* Visual Element */}
                         <div className="flex-1 relative h-64 lg:h-80">
-                          <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-20`} />
+                          <div className={`absolute inset-0 ${colorClass} opacity-20`} />
                           <div className="absolute inset-0 flex items-center justify-center">
                             <div
-                              className={`w-32 h-32 bg-gradient-to-r ${step.color} rounded-full flex items-center justify-center shadow-2xl`}
+                              className={`w-32 h-32 ${colorClass} rounded-full flex items-center justify-center shadow-2xl`}
                             >
                               <span className="text-4xl font-bold text-white">{step.number}</span>
                             </div>
