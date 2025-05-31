@@ -39,32 +39,6 @@ export function Footer() {
               Providing compassionate, evidence-based mental health care to help
               you achieve lasting wellness and resilience.
             </p>
-            <div className="flex space-x-4">
-              <Link
-                href="#"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-              </Link>
-              <Link
-                href="#"
-                className="text-gray-400 hover:text-blue-400 transition-colors"
-              >
-                <Linkedin className="h-5 w-5" />
-              </Link>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -87,28 +61,13 @@ export function Footer() {
                   About Us
                 </Link>
               </li>
+
               <li>
                 <Link
-                  href="#team"
+                  href="/#how-to-start"
                   className="text-gray-300 hover:text-blue-400 transition-colors"
                 >
-                  Our Team
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/appointment"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  Book an Appointment
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/privacy"
-                  className="text-gray-300 hover:text-blue-400 transition-colors"
-                >
-                  Privacy Policy
+                  Get Started
                 </Link>
               </li>
             </ul>
@@ -161,22 +120,16 @@ export function Footer() {
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
-                href="/terms"
+                href="/privacy "
                 className="text-gray-400 hover:text-blue-400 text-sm transition-colors"
               >
-                Terms of Service
+                Privacy Policy{" "}
               </Link>
               <Link
                 href="/privacy"
                 className="text-gray-400 hover:text-blue-400 text-sm transition-colors"
               >
                 Privacy Policy
-              </Link>
-              <Link
-                href="/hipaa"
-                className="text-gray-400 hover:text-blue-400 text-sm transition-colors"
-              >
-                HIPAA Notice
               </Link>
             </div>
           </div>

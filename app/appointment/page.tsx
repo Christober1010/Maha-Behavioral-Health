@@ -29,6 +29,7 @@ import emailjs from "@emailjs/browser";
 import { useRouter } from "next/navigation";
 import { ScrollAnimation } from "@/components/scroll-animations";
 import Link from "next/link";
+import { Footer } from "@/components/footer";
 
 export default function AppointmentPage() {
   const [formData, setFormData] = useState({
@@ -246,7 +247,7 @@ export default function AppointmentPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-teal-50 py-20">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-teal-50 pt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <ScrollAnimation animation="fadeIn">
@@ -716,6 +717,7 @@ export default function AppointmentPage() {
           </ScrollAnimation>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

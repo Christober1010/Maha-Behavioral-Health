@@ -39,12 +39,11 @@ export const siteData = {
     },
   },
   insurance: [
-    "Aetna",
     "Blue Cross Blue Shield",
-    "Cigna",
-    "Humana",
-    "Kaiser Permanente",
-    "UnitedHealthcare",
+    "Compsych Health Services",
+    "Magellan Healthcare",
+    "Aetna Health",
+    "Cigna Healthcare",
   ],
   insuranceLogos: [
     {
@@ -59,34 +58,34 @@ export const siteData = {
       name: "Cigna",
       logo: "https://brandlogos.net/wp-content/uploads/2023/08/cigna_healthcare-logo_brandlogos.net_lblbp-512x512.png",
     },
-    {
-      name: "UnitedHealthcare",
-      logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/29/UnitedHealthcare_%28logo%29.svg/564px-UnitedHealthcare_%28logo%29.svg.png?20231113000934",
-    },
-    {
-      name: "Medicare",
-      logo: "https://1000logos.net/wp-content/uploads/2022/03/Medicare-Logo-500x281.jpg",
-    },
-    {
-      name: "Medicaid",
-      logo: "https://i0.wp.com/clearhealthcosts.com/wp-content/uploads/2023/02/medicaid-logo-5.jpg?w=1600&ssl=1",
-    },
-    {
-      name: "Humana",
-      logo: "https://1000logos.net/wp-content/uploads/2020/08/Humana-logo-500x225.jpg",
-    },
-    {
-      name: "Kaiser Permanente",
-      logo: "https://banner2.cleanpng.com/20181128/krb/kisspng-kaiser-permanente-rancho-san-diego-medical-offices-1713917184118.webp",
-    },
-    {
-      name: "Anthem",
-      logo: "https://www.logo.wine/a/logo/Anthem_(company)/Anthem_(company)-Logo.wine.svg",
-    },
-    {
-      name: "Tricare",
-      logo: "https://www.kindpng.com/picc/m/185-1853551_tricare-logo-hd-png-download.png",
-    },
+    // {
+    //   name: "UnitedHealthcare",
+    //   logo: "https://upload.wikimedia.org/wikipedia/en/thumb/2/29/UnitedHealthcare_%28logo%29.svg/564px-UnitedHealthcare_%28logo%29.svg.png?20231113000934",
+    // },
+    // {
+    //   name: "Medicare",
+    //   logo: "https://1000logos.net/wp-content/uploads/2022/03/Medicare-Logo-500x281.jpg",
+    // },
+    // {
+    //   name: "Medicaid",
+    //   logo: "https://i0.wp.com/clearhealthcosts.com/wp-content/uploads/2023/02/medicaid-logo-5.jpg?w=1600&ssl=1",
+    // },
+    // {
+    //   name: "Humana",
+    //   logo: "https://1000logos.net/wp-content/uploads/2020/08/Humana-logo-500x225.jpg",
+    // },
+    // {
+    //   name: "Kaiser Permanente",
+    //   logo: "https://banner2.cleanpng.com/20181128/krb/kisspng-kaiser-permanente-rancho-san-diego-medical-offices-1713917184118.webp",
+    // },
+    // {
+    //   name: "Anthem",
+    //   logo: "https://www.logo.wine/a/logo/Anthem_(company)/Anthem_(company)-Logo.wine.svg",
+    // },
+    // {
+    //   name: "Tricare",
+    //   logo: "https://www.kindpng.com/picc/m/185-1853551_tricare-logo-hd-png-download.png",
+    // },
   ],
   services: [
     {

@@ -31,7 +31,7 @@ export function InsuranceCarousel() {
       </div>
       <div ref={scrollRef} className="flex space-x-8 overflow-hidden" style={{ scrollBehavior: "auto" }}>
         {/* Duplicate the logos for seamless loop */}
-        {[...insuranceLogos, ...insuranceLogos].map((insurance, index) => (
+        {[...insuranceLogos,...insuranceLogos, ...insuranceLogos].map((insurance, index) => (
           <div
             key={`${insurance.name}-${index}`}
             className="flex-shrink-0 flex items-center justify-center w-32 h-16  rounded-lg  transition-shadow duration-300"
