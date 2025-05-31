@@ -48,11 +48,13 @@ export function HeroSection() {
       <div className="container mx-auto px-4 relative z-10 pt-20">
         <div className="max-w-5xl mx-auto text-center">
           {/* Main Title */}
-          <div className="opacity-100 mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 bg-clip-text text-transparent mb-6 leading-tight">
-              {hero.title}
-            </h1>
-          </div>
+          <ScrollAnimation animation="slideUp" delay={100}>
+            <div className="opacity-100 mb-8">
+              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-blue-600 to-teal-600 bg-clip-text text-transparent mb-6 leading-tight">
+                {hero.title}
+              </h1>
+            </div>{" "}
+          </ScrollAnimation>
 
           <ScrollAnimation animation="slideUp" delay={300}>
             <p className="text-xl md:text-2xl font-medium mb-4 bg-gradient-to-r from-purple-700 to-blue-700 bg-clip-text text-transparent">

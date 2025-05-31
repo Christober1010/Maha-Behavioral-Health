@@ -1,12 +1,13 @@
-import { Header } from "@/components/header"
-import { HeroSection } from "@/components/hero-section"
-import { ServicesSection } from "@/components/services-section"
-import { AutismInfoSection } from "@/components/autism-info-section"
-import { AboutSection } from "@/components/about-section"
-import { HowToStartSection } from "@/components/how-to-start-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
-import { ContactSection } from "@/components/contact-section"
-import { Footer } from "@/components/footer"
+import { Header } from "@/components/header";
+import { HeroSection } from "@/components/hero-section";
+import { ServicesSection } from "@/components/services-section";
+import { AutismInfoSection } from "@/components/autism-info-section";
+import { AboutSection } from "@/components/about-section";
+import { HowToStartSection } from "@/components/how-to-start-section";
+import { TestimonialsSection } from "@/components/testimonials-section";
+import { ContactSection } from "@/components/contact-section";
+import { Footer } from "@/components/footer";
+import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <ContactSection />
       </section>
       <Footer />
+      <Toaster position="bottom-right" />
     </main>
-  )
+  );
 }
