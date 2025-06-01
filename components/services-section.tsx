@@ -120,7 +120,7 @@ export function ServicesSection() {
                           : "bg-gray-400"
                       }`}
                     >
-                      Start Therapy
+                      Get Started
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </CardContent>

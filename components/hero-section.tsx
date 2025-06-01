@@ -13,7 +13,7 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-100 via-blue-50 to-teal-100">
       {/* Animated Background Elements */}
-      <ParallaxSection speed={0.8} className="absolute inset-0">
+      <ParallaxSection speed={1.2} className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-blue-600/10 to-teal-600/10" />
       </ParallaxSection>
 

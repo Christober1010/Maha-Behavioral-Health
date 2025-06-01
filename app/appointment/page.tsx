@@ -1,15 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
-import {
-  Calendar,
-  User,
-  Clock,
-  Phone,
-  Info,
-  Check,
-  ArrowLeft,
-} from "lucide-react";
+import type React from "react";
+import { useState } from "react";
+import { Calendar, User, Clock, ArrowLeft, Heart } from "lucide-react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -30,6 +23,7 @@ import { useRouter } from "next/navigation";
 import { ScrollAnimation } from "@/components/scroll-animations";
 import Link from "next/link";
 import { Footer } from "@/components/footer";
+import { siteData } from "@/data/site-data";
 
 export default function AppointmentPage() {
   const [formData, setFormData] = useState({
@@ -41,12 +35,12 @@ export default function AppointmentPage() {
     preferredDate: "",
     preferredTime: "",
     serviceType: "",
+    preferredContactMethod: "",
     insuranceProvider: "",
-    emergencyContact: "",
-    emergencyPhone: "",
+    groupNumber: "",
+    subscriberId: "",
     concerns: "",
     previousTherapy: false,
-    medications: "",
     additionalInfo: "",
   });
 
@@ -64,11 +58,6 @@ export default function AppointmentPage() {
           return `${
             name === "firstName" ? "First Name" : "Last Name"
           }  is required.`;
-        return "";
-
-      case "emergencyContact":
-        if (!value || (typeof value === "string" && value.trim() === ""))
-          return "This field is required.";
         return "";
 
       case "email":
@@ -95,27 +84,6 @@ export default function AppointmentPage() {
 
           if (digitsOnly.length < 10)
             return "Phone number must be at least 10 digits.";
-        }
-        return "";
-
-      case "emergencyPhone":
-        if (!value || (typeof value === "string" && value.trim() === ""))
-          return "Phone number is required.";
-        if (
-          typeof value === "string" &&
-          !/^\+?[\d\s\-()]{7,15}$/.test(value.trim())
-        )
-          return "Please enter a valid phone number.";
-        return "";
-
-      case "dateOfBirth":
-        if (!value || (typeof value === "string" && value.trim() === ""))
-          return "Date of Birth is required.";
-        if (typeof value === "string") {
-          const dob = new Date(value);
-          const now = new Date();
-          if (dob > now) return "Date of Birth cannot be in the future.";
-          // Removed minimum age check, so anyone of any age is allowed
         }
         return "";
 
@@ -163,9 +131,21 @@ export default function AppointmentPage() {
           return "This field is required.";
         return "";
 
+      case "preferredContactMethod":
+        if (!value || (typeof value === "string" && value.trim() === ""))
+          return "Preferred contact method is required.";
+        return "";
+
       case "concerns":
         if (!value || (typeof value === "string" && value.trim() === ""))
           return "Please describe your primary concerns.";
+        return "";
+      case "dateOfBirth":
+        if (typeof value === "string" && value.trim() !== "") {
+          const dob = new Date(value);
+          const now = new Date();
+          if (dob > now) return "Date of Birth cannot be in the future.";
+        }
         return "";
       default:
         return "";
@@ -226,12 +206,12 @@ export default function AppointmentPage() {
         preferredDate: "",
         preferredTime: "",
         serviceType: "",
+        preferredContactMethod: "",
         insuranceProvider: "",
-        emergencyContact: "",
-        emergencyPhone: "",
+        groupNumber: "",
+        subscriberId: "",
         concerns: "",
         previousTherapy: false,
-        medications: "",
         additionalInfo: "",
       });
       setFormErrors({});
@@ -270,7 +250,7 @@ export default function AppointmentPage() {
           </ScrollAnimation>
           {/* Form Card */}
           <ScrollAnimation animation="slideUp" delay={200}>
-            <Card className="border-0 shadow-xl bg-white/80 backdrop-blur-sm">
+            <Card className="border-0 shadow-[0_0_20px_rgba(0,0,0,0.1)] bg-white/80 backdrop-blur-sm">
               <CardHeader className="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-t-lg">
                 <CardTitle className="text-2xl flex items-center">
                   <Calendar className="h-6 w-6 mr-3" />
@@ -401,7 +381,7 @@ export default function AppointmentPage() {
                       </div>
 
                       {/* Date of Birth */}
-                      <div>
+                      {/* <div>
                         <label
                           htmlFor="dateOfBirth"
                           className="block text-sm font-medium text-gray-700 mb-2"
@@ -426,7 +406,7 @@ export default function AppointmentPage() {
                             {formErrors.dateOfBirth}
                           </p>
                         )}
-                      </div>
+                      </div> */}
                     </div>
                   </section>
 
@@ -533,71 +513,39 @@ export default function AppointmentPage() {
                           </p>
                         )}
                       </div>
-                    </div>
-                  </section>
-
-                  {/* Emergency Contact */}
-                  <section>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                      <Phone className="h-5 w-5 mr-2 text-purple-600" />
-                      Emergency Contact Information
-                    </h3>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {/* Emergency Contact Name */}
+                      {/* Preferred Contact Method */}
                       <div>
                         <label
-                          htmlFor="emergencyContact"
+                          htmlFor="preferredContactMethod"
                           className="block text-sm font-medium text-gray-700 mb-2"
                         >
-                          Emergency Contact Name *
+                          Preferred Contact Method *
                         </label>
-                        <Input
-                          id="emergencyContact"
-                          value={formData.emergencyContact}
-                          onChange={(e) =>
-                            handleInputChange(
-                              "emergencyContact",
-                              e.target.value
-                            )
+                        <Select
+                          value={formData.preferredContactMethod || ""}
+                          onValueChange={(value) =>
+                            handleInputChange("preferredContactMethod", value)
                           }
-                          placeholder="Emergency contact name"
-                          aria-invalid={!!formErrors.emergencyContact}
-                          aria-describedby="emergencyContact-error"
-                        />
-                        {formErrors.emergencyContact && (
-                          <p
-                            id="emergencyContact-error"
-                            className="text-red-600 text-sm mt-1"
-                          >
-                            {formErrors.emergencyContact}
-                          </p>
-                        )}
-                      </div>
-
-                      {/* Emergency Contact Phone */}
-                      <div>
-                        <label
-                          htmlFor="emergencyPhone"
-                          className="block text-sm font-medium text-gray-700 mb-2"
+                          aria-invalid={!!formErrors.preferredContactMethod}
+                          aria-describedby="preferredContactMethod-error"
                         >
-                          Emergency Contact Phone *
-                        </label>
-                        <Input
-                          id="emergencyPhone"
-                          value={formData.emergencyPhone}
-                          onChange={(e) =>
-                            handleInputChange("emergencyPhone", e.target.value)
-                          }
-                          placeholder="Emergency phone number"
-                          aria-invalid={!!formErrors.emergencyPhone}
-                          aria-describedby="emergencyPhone-error"
-                        />
-                        {formErrors.emergencyPhone && (
+                          <SelectTrigger
+                            id="preferredContactMethod"
+                            className="w-full"
+                          >
+                            <SelectValue placeholder="Select contact method" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="email">Email</SelectItem>
+                            <SelectItem value="phone">Phone</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        {formErrors.preferredContactMethod && (
                           <p
-                            id="emergencyPhone-error"
+                            id="preferredContactMethod-error"
                             className="text-red-600 text-sm mt-1"
                           >
-                            {formErrors.emergencyPhone}
+                            {formErrors.preferredContactMethod}
                           </p>
                         )}
                       </div>
@@ -632,7 +580,88 @@ export default function AppointmentPage() {
                       </p>
                     )}
                   </section>
-
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                      <Heart className="h-5 w-5 mr-2 text-purple-600" />
+                      Insurance Information
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Insurance Provider
+                        </label>
+                        <Select
+                          value={formData.insuranceProvider}
+                          onValueChange={(value) =>
+                            handleInputChange("insuranceProvider", value)
+                          }
+                        >
+                          <SelectTrigger className="w-full">
+                            <SelectValue placeholder="Select insurance provider" />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {siteData.insuranceLogos.map((insurance) => (
+                              <SelectItem
+                                key={insurance.name}
+                                value={insurance.name
+                                  .toLowerCase()
+                                  .replace(/\s+/g, "-")}
+                              >
+                                {insurance.name}
+                              </SelectItem>
+                            ))}
+                            <SelectItem value="other">Other</SelectItem>
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Group Number
+                        </label>
+                        <Input
+                          value={formData.groupNumber || ""}
+                          onChange={(e) =>
+                            handleInputChange("groupNumber", e.target.value)
+                          }
+                          placeholder="Insurance group number"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Subscriber ID
+                        </label>
+                        <Input
+                          value={formData.subscriberId || ""}
+                          onChange={(e) =>
+                            handleInputChange("subscriberId", e.target.value)
+                          }
+                          placeholder="Insurance subscriber ID"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                          Date of Birth
+                        </label>
+                        <Input
+                          type="date"
+                          value={formData.dateOfBirth || ""}
+                          onChange={(e) =>
+                            handleInputChange("dateOfBirth", e.target.value)
+                          }
+                          aria-invalid={!!formErrors.dateOfBirth}
+                          aria-describedby="dateOfBirth-error"
+                        />
+                        {formErrors.dateOfBirth && (
+                          <p
+                            id="dateOfBirth-error"
+                            className="text-red-600 text-sm mt-1"
+                          >
+                            {formErrors.dateOfBirth}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
                   {/* Previous Therapy Checkbox */}
                   <section>
                     <label className="inline-flex items-center">
@@ -651,7 +680,7 @@ export default function AppointmentPage() {
                   </section>
 
                   {/* Medications */}
-                  <section>
+                  {/* <section>
                     <label
                       htmlFor="medications"
                       className="block text-sm font-medium text-gray-700 mb-2"
@@ -667,7 +696,7 @@ export default function AppointmentPage() {
                       rows={2}
                       placeholder="List any medications you are currently taking"
                     />
-                  </section>
+                  </section> */}
 
                   {/* Additional Info */}
                   <section>
@@ -697,12 +726,10 @@ export default function AppointmentPage() {
                       !formData.lastName ||
                       !formData.email ||
                       !formData.phone ||
-                      !formData.dateOfBirth ||
                       !formData.preferredDate ||
                       !formData.preferredTime ||
                       !formData.serviceType ||
-                      !formData.emergencyContact ||
-                      !formData.emergencyPhone ||
+                      !formData.preferredContactMethod ||
                       !formData.concerns
                     }
                     className="w-full"

@@ -49,7 +49,7 @@ export function Header() {
               />
             </div>
             <span className="text-lg md:text-2xl font-extrabold text-gray-900 select-none truncate">
-              Maha Behavioral Health
+              Maha Behavioral Health Services
             </span>
           </Link>
 
@@ -78,9 +78,16 @@ export function Header() {
             <Link href="/appointment" passHref>
               <Button
                 size="sm"
-                className="rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md transition-all"
+                className="group relative rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md transition-all duration-300 overflow-hidden hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/25"
               >
-                Book Appointment
+                {/* Shimmer effect */}
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+
+                {/* Button text */}
+                <span className="relative z-10">Book Appointment</span>
+
+                {/* Ripple effect on hover */}
+                <div className="absolute inset-0 rounded-full bg-white/10 scale-0 group-hover:scale-100 transition-transform duration-300"></div>
               </Button>
             </Link>
           </div>
