@@ -225,6 +225,19 @@ export default function AppointmentPage() {
       setIsSubmitting(false);
     }
   };
+  const handleSubmits = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const response = await fetch("/api/submit-form", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const result = await response.json();
+    console.log(result)
+    alert(result.message);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-teal-50">
@@ -258,7 +271,7 @@ export default function AppointmentPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-8" noValidate>
+                <form onSubmit={handleSubmits} className="space-y-8" noValidate>
                   {/* Personal Information */}
                   <section>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
