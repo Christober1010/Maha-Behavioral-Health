@@ -271,7 +271,7 @@ export default function AppointmentPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="p-8">
-                <form onSubmit={handleSubmits} className="space-y-8" noValidate>
+                <form onSubmit={handleSubmit} className="space-y-8" noValidate>
                   {/* Personal Information */}
                   <section>
                     <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
